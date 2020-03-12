@@ -26,7 +26,15 @@ class PolicyNetwork {
             }));
         });
 
-        // output layer
+        // output layer has 1 unit.
+        // the output number will be converted to a probability of selecting the leftward-force action.
         this.policyNet.add(tf.layers.dense({units: 1}));
+    }
+
+    async train(env, optimizer, discountRate, numGames, maxStepsPerGame) {
+        for (let i = 0; i < numGames; i++) {
+            
+            
+        }
     }
 }
